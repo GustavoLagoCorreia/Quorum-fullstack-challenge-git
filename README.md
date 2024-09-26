@@ -4,34 +4,34 @@
 
 This repository contains the solution to the challenge of [Full stack from Quorum] I used the Python Framework and Html to develop the application
 
-## 📖 Sobre o desafio
+## 📖 About the challenge
 
-A Quorum, atuando no segmento de Legislaçoes, passou por várias mudanças desde de sua fundação. Foi necessário desenvolver metodos mais ageis e de facil consulta para seus clientes conseguirem ver sobre as ultimas votas e quais os assuntos sobre elas. 
+Quorum, which operates in the public affairs sector, has undergone several changes since it was founded. It was necessary to develop more agile and user-friendly methods for its clients to use more efficiently and quickly. 
 
-Neste desafio, foi implementado as seguintes funcionalidades de acordo com as regras de negócio definidas:
+In this challenge, the following functionalities were implemented according to the defined business rules:
 
-### Funcionalidades
-[x] Carrega massa de dados através dos arquivos CSV.
-[x] Fazer a manipulação e a contagem votos para cada lei e para cada lesgilador.
-[x] filtrar por tabelas que queiram ver.
-[x] Listagem das leis, lesgiladores e votos em cada lei.
+### Features
+[x] Uploads masses of data via CSV files.
+[x] Manipulate and count votes for each law and each legislator.
+[x] filter by the tables you want to see.
+[x] List of laws, legislators and votes on each law.
 
-### Regras de negócio
-- Para cada legislador disponível, quantos projetos de lei o legislador apoiou (votou a favor do projeto de lei).
-- Quantos projetos de lei o legislador se opôs.
-- Para cada projeto de lei disponível, quantos legisladores apoiaram o projeto de lei.
-- Quantos legisladores se opuseram ao projeto de lei.
-- Quem foi o patrocinador principal do projeto de lei.
+### Business rules
+- For each legislator available, how many bills did the legislator support (vote in favor of the bill).
+- How many bills the legislature has opposed.
+- For each bill available, how many legislators supported the bill.
+- How many legislators opposed the bill.
+- Who was the main sponsor of the bill.
 
 ## 🎨 Layout
 
-O layout da aplicação foi baseado nos materiais disponibilizados, incluindo designs para dispositivos móveis e desktop, cores, imagens e fontes. A aplicação é responsiva para dispositivos móveis, tablets e desktops.
+The layout of the application was based on the materials provided, including designs for mobile and desktop devices, colors, images and fonts. The application is responsive for mobile devices, tablets and desktops.
 
-## ⚙️ Como Executar
+## ⚙️ How to Run
 
-Para executar a aplicação localmente, siga os passos abaixo:
+To run the application locally, follow the steps below:
 
-1. Clone este repositório:
+1. Clone this repository:
 
 ```bash
   git https://github.com/GustavoLagoCorreia/Quorum-fullstack-challenge-git.git
@@ -39,13 +39,13 @@ Para executar a aplicação localmente, siga os passos abaixo:
 
 ```
 
-2. Instale as dependências
+2. Install the dependencies
 
 ```bash
   pip install -r requerinments.txt
 ```
 
-3. Inicie a aplicação
+3. Start the application
 
 ```bash
   python app.py
