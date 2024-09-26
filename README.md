@@ -2,7 +2,7 @@
 
 ![Quorum](.templates/src/images/Quorum_full_color_dark.png)
 
-Este repositório contém a solução para o desafio de [Full stack da Quorum] Eu utilizei o Framework Python e Html para desenvolver a aplicação
+This repository contains the solution to the challenge of [Full stack from Quorum] I used the Python Framework and Html to develop the application
 
 ## 📖 Sobre o desafio
 
