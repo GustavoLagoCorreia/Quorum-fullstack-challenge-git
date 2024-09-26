@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenger Quorum</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="templates/styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            color: #343a40;
+            margin-top: 30px;
+        }
+
+        table {
+            margin-top: 20px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+        }
+
+        .button {
+            color: white; /* text-white */
+            background: linear-gradient(to right, #3b82f6, #3b99f6, #3b82f6); /* bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 */
+            padding: 0.625rem 1.25rem; /* px-5 py-2.5 */
+            text-align: center; /* text-center */
+            border-radius: 0.5rem; /* rounded-lg */
+            font-size: 0.875rem; /* text-sm */
+            margin-right: 0.5rem; /* mr-2 */
+            margin-bottom: 0.5rem; /* mb-2 */
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        
+        .button:hover {
+            background: linear-gradient(to bottom right, #3b99f6, #3b82f6, #3b82f6); /* hover:bg-gradient-to-br */
+        }
+        
+        .button:focus {
+            outline: none; /* focus:outline-none */
+            box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.5); /* focus:ring-4 focus:ring-blue-300 */
+        }
+        
+        .button.dark:focus {
+            box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.8); /* dark:focus:ring-blue-800 */
+        }
+        
+        .button.shadow {
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5); /* shadow-lg shadow-blue-400/50 */
+        }
+        
+        .button.dark.shadow {
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.8); /* dark:shadow-lg dark:shadow-blue-800/80 */
+        }
+        
+        .button.font-medium {
+            font-weight: 500; /* font-medium */
+        }
+        
+        .btn-lg {
+            font-size: 1.25rem; /* Aumenta o tamanho da fonte do botão */
+            padding: 0.75rem 1.5rem; /* Aumenta o padding do botão */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>
+            <button class="button btn-lg" onclick="showHome()">
+                Challenger Quorum</button>
+        </h1> 
+    </div>
+    <div class="container mt-5 text-center">
+        
+        <div class="mb-4">
+            <button class="button" onclick="showTable('legislator')">Legislator Summary</button>
+            <button class="button" onclick="showTable('bill')">Bill Summary</button>
+            <button class="button" onclick="showTable('vote')">Votes Summary</button>
+        </div>
+        
+        <div id="summaryText" class="mb-4">
+            <p>Este é um resumo inicial. Selecione uma das opções acima para visualizar as tabelas.</p>
+        </div>
+
+        <div id="legislatorTable" class="table-container hidden">
+            <h2>Legislator Summary</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Supported Bills</th>
+                        <th>Opposed Bills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for legislator in legislators.itertuples() %}
+                    <tr>
+                        <td>{{ legislator.ID }}</td>
+                        <td>{{ legislator.legislator_name }}</td>
+                        <td>{{ legislator.Supported_bills }}</td>
+                        <td>{{ legislator.Opposed_bills }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div id="billTable" class="table-container hidden">
+            <h2>Bill Summary</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Supporters</th>
+                        <th>Opposers</th>
+                        <th>Primary Sponsor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in bills.itertuples() %}
+                    <tr>
+                        <td>{{ row.ID }}</td>
+                        <td>{{ row.title }}</td>
+                        <td>{{ row.Supporters }}</td>
+                        <td>{{ row.Opposers }}</td>
+                        <td>{{ row.Primary_Sponsor_name }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div id="voteTable" class="table-container hidden">
+            <h2>Votes Summary</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Legislator Name</th>
+                        <th>Vote Type</th>
+                        <th>Bill ID</th>
+                        <th>Bill Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for vote in votes.itertuples() %}
+                    <tr>
+                        <td>{{ vote.legislator_name }}</td>
+                        <td>{{ vote.vote_type }}</td>
+                        <td>{{ vote.bill_id }}</td>
+                        <td>{{ vote.bill_title }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function showTable(tableType) {
+            document.querySelectorAll('.table-container').forEach(table => {
+                table.classList.add('hidden');
+            });
+            document.getElementById('summaryText').classList.add('hidden');
+            document.getElementById(tableType + 'Table').classList.remove('hidden');
+        }
+
+        function showHome() {
+            document.querySelectorAll('.table-container').forEach(table => {
+                table.classList.add('hidden');
+            });
+            document.getElementById('summaryText').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

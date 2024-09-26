@@ -1,8 +1,28 @@
+'''
+1 - Objetivo - 
+    1. Build a web application (ex. a Django web application)
+    2. Provide the information that the client needs
+    3. Choose the best way to display this information.
+        a. For example, both questions can be answered with simple tables.
+        b. You to decide how much creativity and effort you would like to put into the solution. You are free to use any UI elements that you want.      
+2 - URL Base - LocalHost
+3 - Endpoints
+        localhost/bills (GET)
+        localhost/legislators (GET)
+        localhost/votes (GET)
+        localhost/vote_results (GET)
+        localhost/upload_new_datas (POST)
+
+4 - Quais Recursos
+        votos
+'''
+
+
 # Challenge Full Stack - Quorum
 
 ![Quorum](.templates/src/images/Quorum_full_color_dark.png)
 
-This repository contains the solution to the challenge of [Full stack from Quorum] I used the Python Framework and Html to develop the application
+Este repositório contém a solução para o desafio de [Full stack da Quorum] Eu utilizei o Framework Python e Html para desenvolver a aplicação
 
 ## 📖 Sobre o desafio
 
@@ -34,7 +54,7 @@ Para executar a aplicação localmente, siga os passos abaixo:
 1. Clone este repositório:
 
 ```bash
-  git https://github.com/GustavoLagoCorreia/Quorum-fullstack-challenge-git.git
+  git clone https://github.com/Fernanda-Kipper/smartfit-frontend-challenge.git
   cd Quorum-fullstack-challenge-git
 
 ```
