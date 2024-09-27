@@ -87,13 +87,21 @@ def summarize_votes(vote_results, bills, votes):
 
 
 def clean_nan(clean_df):
-    ''' renamed NAN field to not found when can't found '''
+    """renamed NAN field to not found when can't found."""
     clean_df = clean_df.fillna('not found')
     return clean_df
 
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    """
+        def index process DataFrama with pandas
+        exemple:
+                    Opposers  Supporters       ID                                              title        Primary_Sponsor        Primary_Sponsor_name
+            0        4           1           0123456  H.R. 3684: Infrastructure Investment and Jobs Act           678123                 new sponsor
+            1        3           2           1234567                   H.R. 5376: Build Back Better Act           123876                 Yarmth thinking
+        
+    """
     try:
         bills, legislators, votes, vote_results = load_data()
         vote_results = preprocess_vote_results(vote_results, legislators)

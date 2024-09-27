@@ -1,30 +1,28 @@
-### 1. Discuta sua estratégia e suas decisões ao implementar o aplicativo. Leve em consideração o tempo
-complexidade, custo do esforço, tecnologias usadas e qualquer outra variável que você considere
-importante em seu processo de desenvolvimento.
+### 1. Discuss your strategy and decisions implementing the application. Please, considertime complexity, effort cost, technologies used and any other variable that you understand important on your development process.
 
 ```bash
 R: 
-    Minha estratégia foi criar um aplicativo de forma rápida, mas eficiente, mostrando para o usuário o que ele procura de forma efetiva e sem muita complexidade.
+    My strategy was to create an application quickly, but efficiently, showing the user what they are looking for effectively and without much complexity.
 
-    Usei o Python juntamente com o Flask, pois em questão de segundos posso fazer uma API. Utilize a biblioteca Pandas por ser uma ferramenta muito poderosa para manipulações de dados de forma rápida e leve, pois acredito que quanto menos o cliente esperar para carregar a página com os dados, melhor. Poderia ter utilizado outras linguagens mais robustas para o front-end e ter feito mais coisas para impressionar o cliente de forma visual, mas como prezei pela agilidade e facilidade, usei HTML com JavaScript e Jinja2 para poder exibir as informações de forma rápida, leve e fácil para o usuário.
+    I used Python together with Flask, as I can create an API in a matter of seconds. I utilized the Pandas library because it is a very powerful tool for data manipulation in a fast and lightweight manner, as I believe that the less time the client has to wait for the page to load with the data, the better. I could have used more robust languages for the front-end and done more to visually impress the client, but since I prioritized agility and ease, I used HTML with JavaScript and Jinja2 to display the information quickly, lightly, and easily for the user.
 
-    O design foi feito para não confundir o cliente que acessar, deixando-o o mais simples possível, para que ele possa se preocupar com outras coisas, ao invés de como chegar a um local para obter a resposta que precisa.
+    The design was created to avoid confusing the client accessing it, keeping it as simple as possible so that they can focus on other things instead of figuring out how to get to a place to obtain the answer they need.
 ```
 
-### 2. Como você mudaria sua solução para levar em conta futuras colunas que possam ser solicitadas, como “Bill Voted On Date” (Projeto de lei votado na data) ou “Co-Sponsors” (Co-patrocinadores)?
+### 2. How would you change your solution to account forfuture columns that might be requested, such as “Bill Voted On Date” or“Co-Sponsors”?
 
 ```bash
-R: Mudaria o filtro do Pandas para que os novos campos não sejam excluídos e, de forma rápida e simples, os inseriria no código HTML usando o Jinja2.
+R: I would modify the Pandas filter so that the new fields are not excluded and, quickly and simply, I would insert them into the HTML code using Jinja2.
 ```
 
-### 3. Como você mudaria sua solução se, em vez de receber CSVs de dados, você recebesse uma lista de legisladores ou projetos de lei para os quais você deveria gerar um CSV?
+### 3. How would you change your solution if instead ofreceiving CSVs of data, you were given a list of legislators or bills that you should generate a CSV for?
 
 ```bash
-R: Caso continuasse com a mesma regra de negócios, iria mesclar as listas de legisladores ou projetos de leis através do DataFrame para que fiquem em apenas uma variável e usaria a função to_csv do Pandas para gerar o CSV dessas listas. Caso precise gerar uma separada da outra, usaria o comando duas vezes.
+R: If I continued with the same business rule, I would merge the lists of legislators or bills through the DataFrame so that they are in just one variable, and I would use the to_csv function from Pandas to generate the CSV of these lists. If I need to generate one separate from the other, I would use the command twice.
 ```
 
-### 4. Quanto tempo você gastou trabalhando na tarefa?
+### 4. How long did you spend working on the assignment?
 
 ```bash
-R: O tempo gasto pesquisando, codificando, pensando e testando a aplicação para que a tarefa chegasse ao final, de forma a responder a todos os requisitos propostos e perguntas do desafio, foi, ao todo, de 8 horas de trabalho ao longo de 2 dias.
+R: The time spent researching, coding, thinking, and testing the application to ensure that the task was completed in a way that addressed all the proposed requirements and questions of the challenge was a total of 8 hours of work over the course of 2 days.
 ```
