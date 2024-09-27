@@ -34,7 +34,7 @@ To run the application locally, follow the steps below:
 1. Clone this repository:
 
 ```bash
-  git https://github.com/GustavoLagoCorreia/Quorum-fullstack-challenge-git.git
+  git clone https://github.com/GustavoLagoCorreia/Quorum-fullstack-challenge-git.git
   cd Quorum-fullstack-challenge-git
 
 ```
