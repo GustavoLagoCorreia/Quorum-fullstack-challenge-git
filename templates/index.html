@@ -79,23 +79,32 @@
     </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>
-            <button class="button btn-lg" onclick="showHome()">
-                Challenger Quorum</button>
-        </h1> 
-    </div>
     <div class="container mt-5 text-center">
         
         <div class="mb-4">
-            <button class="button" onclick="showTable('legislator')">Legislator Summary</button>
-            <button class="button" onclick="showTable('bill')">Bill Summary</button>
-            <button class="button" onclick="showTable('vote')">Votes Summary</button>
+            <button class="button btn-lg" onclick="showHome()"> Home</button>
+            <button class="button btn-lg" onclick="showTable('legislator')">Legislator Summary</button>
+            <button class="button btn-lg" onclick="showTable('bill')">Bill Summary</button>
+            <button class="button btn-lg" onclick="showTable('vote')">Votes Summary</button>
         </div>
         
-        <div id="summaryText" class="mb-4">
-            <p>Este é um resumo inicial. Selecione uma das opções acima para visualizar as tabelas.</p>
+        <div class="container mt-5" id="summaryText">
+            <h1 class="text-primary">Quorum Challenge Solution</h1>
+            <p class="lead">This code was created to address the Quorum challenge using a combination of technologies:</p>
+            
+            <h2 class="text-secondary">Technologies Used</h2>
+            <p>Here are the main technologies implemented in the project:</p>
+            
+            <ul class="list-group mb-4">
+                <li class="list-group-item">🗂️ <strong>Data Handling:</strong> DataFrames through Pandas</li>
+                <li class="list-group-item">🛠️ <strong>Backend Development:</strong> APIs with Python Flask</li>
+                <li class="list-group-item">💻 <strong>Frontend Development:</strong> HTML, JavaScript, and Jinja2</li>
+            </ul>
+        
+            <h2 class="text-secondary">Version Control</h2>
+            <p>This project also includes a repository on GitHub for enhanced version control and organization.</p>
         </div>
+        
 
         <div id="legislatorTable" class="table-container hidden">
             <h2>Legislator Summary</h2>
