@@ -1,4 +1,4 @@
-# Challenge Full Stack - Quorum
+# Challenge Full Stack Engineer - Quorum
 
 ![Quorum](.templates/src/images/Quorum_full_color_dark.png)
 
